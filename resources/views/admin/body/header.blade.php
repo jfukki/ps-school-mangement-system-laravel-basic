@@ -11,11 +11,11 @@
     <title>Ps - School Management System Dashbord</title>
     
 	<!-- Vendors Style-->
-	<link rel="stylesheet" href="backend/css/vendors_css.css">
+	<link rel="stylesheet" href="{{asset('backend/css/vendors_css.css')}}">
 	  
 	<!-- Style-->  
-	<link rel="stylesheet" href="backend/css/style.css">
-	<link rel="stylesheet" href="backend/css/skin_color.css">
+	<link rel="stylesheet" href="{{asset('backend/css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('backend/css/skin_color.css')}}">
      
 
 <style>

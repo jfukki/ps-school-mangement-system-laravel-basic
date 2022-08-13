@@ -1,6 +1,6 @@
  
 	<!-- Vendor JS -->
-	<script src="backend/js/vendors.min.js"></script>
+	<script src="{{asset('backend/js/vendors.min.js')}}"></script>
 	
     <script src="{{asset('../assets/icons/feather-icons/feather.min.js')}}"></script>	
 
@@ -13,8 +13,17 @@
 
 	
 	<!-- Sunny Admin App -->
-	<script src="backend/js/template.js"></script>
-	<script src="backend/js/pages/dashboard.js"></script>
+	<script src="{{asset('backend/js/template.js')}}"></script>
+	<script src="{{asset('backend/js/pages/dashboard.js')}}"></script>
+
+	<script src="{{asset('backend/js/pages/data-table.js')}}"></script>
+
+	<script src="{{asset('backend/js/template.js')}}"></script>
+
+	<script src="{{asset('../assets/vendor_components/datatable/datatables.min.js')}}"></script>
+
+
+
 	
 	
 </body>
