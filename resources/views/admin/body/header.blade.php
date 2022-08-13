@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../images/favicon.ico">
 
-    <title>Ps- School Management System Dashbord</title>
+    <title>Ps - School Management System Dashbord</title>
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="backend/css/vendors_css.css">
