@@ -16,7 +16,7 @@
 			 <div class="box">
 				<div class="box-header with-border">
 				  <h3 class="box-title">Users List</h3>
-                  <a href="#" class="btn btn-md btn-outline-info btn-rounded float-right">Add user</a>
+                  <a href="{{route('user.add')}}" class="btn btn-md btn-outline-info btn-rounded float-right">Add user</a>
 				
                 </div>
                 <!-- /.box-header -->
