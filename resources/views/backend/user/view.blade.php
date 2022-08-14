@@ -44,8 +44,8 @@
 								<td>{{$data->email}}</td>
 							    <td>
                                     
-                                    <a href="" class="btn btn-sm btn-outline-danger">Delete</a>
-                                    <a href="" class="btn btn-sm btn-outline-success">Edit</a>
+                                    <a href="{{route('user.delete', $data->id)}}" class="btn btn-sm btn-outline-danger">Delete</a>
+                                    <a href="{{route('user.edit' , $data->id)}}" class="btn btn-sm btn-outline-success">Edit</a>
 
 
                                 </td>

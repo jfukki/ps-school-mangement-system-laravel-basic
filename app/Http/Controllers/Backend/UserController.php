@@ -50,4 +50,38 @@ class UserController extends Controller
 
 
     }
+
+
+    public function userEdit($id)
+    {
+         $data = User::find($id);
+        return view('backend.user.edit_user', ['data' => $data]);
+    }
+
+    public function userUpdate(Request $req, $id)
+    {
+  
+     $data = User::find($id);
+
+     $data->	user_type = $req->role;
+     $data->	email = $req->email;
+     $data->	name = $req->name;
+     $data->	password = bcrypt($req->password);
+
+     $data->save();
+
+
+     return redirect()->route('user.view');
+
+    }
+
+    public function userDelete($id)
+    {
+
+        $data = User::find($id);
+        $data->delete();
+        return redirect()->route('user.view');
+ 
+
+    }
 }
