@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +37,8 @@ Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin_log
 
 // user management routes
 
-Route::prefix('users')->group(function(){
+Route::group(['prefix' => 'users','middleware' => ['auth:sanctum']], function() {
+
 
     Route::get('/view', [UserController::class, 'userView'])->name('user.view');
     Route::get('/add', [UserController::class, 'userAdd'])->name('user.add');
@@ -47,10 +50,14 @@ Route::prefix('users')->group(function(){
     Route::get('/delete/{id}', [UserController::class, 'userDelete'])->name('user.delete');
 
 
-
-
-
 });
 
-
 // user management routes
+
+// prfile routes
+
+Route::group(['prefix' => 'profile','middleware' => ['auth:sanctum']], function() {
+
+    Route::get('/view', [ProfileController::class, 'profileView'])->name('profile.view');
+
+});

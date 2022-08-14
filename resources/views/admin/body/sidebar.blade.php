@@ -41,6 +41,22 @@
 		  
         <li class="treeview">
           <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Manage Profile</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('profile.view') }}"><i class="ti-more"></i>View Profile</a></li>
+            <li><a href="#"><i class="ti-more"></i>Add Users</a></li>
+          </ul>
+        </li> 
+		  
+
+
+        <li class="treeview">
+          <a href="#">
             <i data-feather="mail"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>

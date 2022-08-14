@@ -31,6 +31,10 @@ class UserController extends Controller
                    'name' => 'required',
                    'role' => 'required',
                    'password' => 'required', 
+                   'address' => 'required', 
+                   'gender' => 'required', 
+                   'mobile' => 'required', 
+                   'status' => 'required', 
  
             ]);
 
@@ -41,6 +45,12 @@ class UserController extends Controller
             $data->	email = $req->email;
             $data->	name = $req->name;
             $data->	password = bcrypt($req->password);
+            $data->	gender = $req->gender;
+            $data->	address = $req->address;
+            $data->	mobile = $req->mobile;
+            $data->	status = $req->status;
+          
+
 
             $data->save();
 
@@ -67,6 +77,10 @@ class UserController extends Controller
      $data->	email = $req->email;
      $data->	name = $req->name;
      $data->	password = bcrypt($req->password);
+     $data->	gender = $req->gender;
+     $data->	address = $req->address;
+     $data->	mobile = $req->mobile;
+     $data->	status = $req->status;
 
      $data->save();
 
@@ -82,6 +96,5 @@ class UserController extends Controller
         $data->delete();
         return redirect()->route('user.view');
  
-
     }
 }
